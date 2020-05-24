@@ -1,20 +1,10 @@
-"use strickt";
+"use strict";
+'use strict'
+const checkForSpam = (str) => {
+    const words = str.toLowerCase();
+    return words.includes('spam') || words.includes('sale');
+  };
 
-const checkForSpam = function (message) {
-    const words = message.toUpperCase()
-    const wordsArray = words.split(' ');
-    const firstWord = 'sale';
-    const secondWord = 'spam';
-    let rezult;
-    for (let i = 1; i < wordsArray.length; i += 1) {
-        if (wordsArray[i] != firstWord && wordsArray[i] != secondWord) {
-            rezult = 'true';
-   break;
-        }
-        rezult = 'false';
-
-    };
-};
 /*
  * Вызовы функции для проверки работоспособности твоей реализации.
  */
